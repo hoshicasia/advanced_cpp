@@ -1,0 +1,5 @@
+add_catch(test_cow_vector cow_vector.cpp cow_vector_test.cpp)
+add_compile_options(-fsanitize=address)
+add_link_options(-fsanitize=address)
+set (CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -fno-omit-frame-pointer -fsanitize=address")
+set (CMAKE_LINKER_FLAGS_DEBUG "${CMAKE_LINKER_FLAGS_DEBUG} -fno-omit-frame-pointer -fsanitize=address")
